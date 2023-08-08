@@ -19,14 +19,14 @@ cd fiskil
 go get
 ```
 
-Set the HTTP port
+Set the port, start the server
 ```
-PORT=8081 server
+export PORT=8081
+go install github.com/simonmittag/fiskil/cmd/server && server
 ```
 
-Start the server and run the integration test
+Run integration test against live server
 ```
-go install github.com/simonmittag/fiskil/cmd/server && server
 go test ./integration
 ```
 
