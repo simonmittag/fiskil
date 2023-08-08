@@ -19,6 +19,11 @@ cd fiskil
 go get
 ```
 
+Set the HTTP port
+```
+PORT=8081 server
+```
+
 Start the server and run the integration test
 ```
 go install github.com/simonmittag/fiskil/cmd/server && server
