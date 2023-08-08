@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+// Test the sequence by sending goroutines in parallel, getting sequence numbers. After completion, value must be
+// number of attempts.
 func TestSequence(t *testing.T) {
 	var wg sync.WaitGroup
 	var x Sequence
@@ -17,7 +19,7 @@ func TestSequence(t *testing.T) {
 		}()
 	}
 
-	//25 async goroutines racing for the sequence
+	//async goroutines racing for the sequence wait here until last one is complete
 	wg.Wait()
 	var want int64 = 25
 	if x.lastUsed != want {

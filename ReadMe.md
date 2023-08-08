@@ -12,6 +12,12 @@ Requirements:
 *	The service should handle multiple requests concurrently and should be thread-safe.
 
 # How
+Check out and install
+```
+git clone https://github.com/simonmittag/fiskil.git
+cd fiskil
+go get
+```
 
 Start the server and run the integration test
 ```
