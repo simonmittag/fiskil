@@ -21,7 +21,7 @@ go get
 
 Set the port, start the server
 ```
-export PORT=8081
+export PORT=8080
 go install github.com/simonmittag/fiskil/cmd/server && server
 ```
 
